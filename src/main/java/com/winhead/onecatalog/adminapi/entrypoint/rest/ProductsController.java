@@ -31,6 +31,11 @@ public class ProductsController {
         return ok("");
     }
 
+    @PostMapping(value = "product/getProduct", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity getProduct(@RequestBody CreateProductRequestDto createProductRequestDto) {
+        return ok("");
+    }
+
     @PostMapping(value = "product/removeProduct", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity removeProduct(@RequestBody CreateProductRequestDto createProductRequestDto) {
         return ok("");
