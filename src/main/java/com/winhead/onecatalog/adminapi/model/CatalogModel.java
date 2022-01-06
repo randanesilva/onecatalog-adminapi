@@ -3,9 +3,12 @@ package com.winhead.onecatalog.adminapi.model;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Builder
@@ -38,5 +41,7 @@ public class CatalogModel {
     private String countryAddress;
     private String moreAddress;
     private String statusCatalog;
+    @DBRef
+    private Set<Role> roles = new HashSet<>();
 
 }

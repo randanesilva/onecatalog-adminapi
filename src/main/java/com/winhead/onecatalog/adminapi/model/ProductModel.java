@@ -16,11 +16,10 @@ public class ProductModel {
     private String id;
     private String title;
     private String description;
-    private String detail;
-    private List<String> size;
+    private List<ProductDetailModel> detail;
     private List<String> pictures;
-    private List<String> colors;
     private BigDecimal price;
+    private BigDecimal costPrice;
     private String currency;
     private float amount;
     private String unit;

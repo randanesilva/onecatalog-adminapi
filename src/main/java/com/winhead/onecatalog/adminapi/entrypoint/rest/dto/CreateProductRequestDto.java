@@ -1,7 +1,5 @@
 package com.winhead.onecatalog.adminapi.entrypoint.rest.dto;
 
-
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,14 +15,10 @@ import java.util.List;
 public class CreateProductRequestDto {
     private String title;
     private String description;
-    private String detail;
-    private List<String> size;
+    private List<ProductDetailDto> detail;
     private List<String> pictures;
-    private List<String> colors;
     private BigDecimal price;
     private String currency;
-    private float amount;
-    private String unit;
     private boolean splitSale;
     private float weight;
     private float height;
