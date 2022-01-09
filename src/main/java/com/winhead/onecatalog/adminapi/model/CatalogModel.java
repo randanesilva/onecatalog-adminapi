@@ -3,9 +3,15 @@ package com.winhead.onecatalog.adminapi.model;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Builder
@@ -13,7 +19,9 @@ import java.math.BigDecimal;
 public class CatalogModel {
     @Id
     private String id;
+    @Indexed(unique = true)
     private String email;
+    @Indexed(unique = true)
     private String login;
     private String password;
     private String cpfCnpj;
@@ -38,5 +46,8 @@ public class CatalogModel {
     private String countryAddress;
     private String moreAddress;
     private String statusCatalog;
+    private long productSequence;
+    @DBRef
+    private Set<Role> roles = new HashSet<>();
 
 }

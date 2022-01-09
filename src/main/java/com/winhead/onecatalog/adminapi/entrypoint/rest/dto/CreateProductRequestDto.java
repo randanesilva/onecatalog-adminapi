@@ -1,12 +1,11 @@
 package com.winhead.onecatalog.adminapi.entrypoint.rest.dto;
 
-
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -15,16 +14,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateProductRequestDto {
+    @NotBlank(message = "Campo titulo está vazio")
     private String title;
+    @NotBlank(message = "Campo descrição está vazio")
     private String description;
-    private String detail;
-    private List<String> size;
+    private List<ProductDetailDto> detail;
     private List<String> pictures;
-    private List<String> colors;
     private BigDecimal price;
+    private BigDecimal CostPrice;
     private String currency;
-    private float amount;
-    private String unit;
     private boolean splitSale;
     private float weight;
     private float height;
@@ -33,8 +31,6 @@ public class CreateProductRequestDto {
     private String category;
     private String subcategory;
     private String brand;
-    private String code;
-    private String user;
-    private String status;
     private int order;
+    private String unit;
 }
