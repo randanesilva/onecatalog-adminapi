@@ -47,7 +47,7 @@ public class CreateCatalogUseCaseImpl implements CreateCatalogUseCase {
             roles.add(userRole);
 
             catalogModel.setRoles(roles);
-
+            catalogModel.setProductSequence(0);
             catalogRepository.save(catalogModel);
             return true;
         }catch (Exception ex){

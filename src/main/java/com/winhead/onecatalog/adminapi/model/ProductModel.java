@@ -1,8 +1,10 @@
 package com.winhead.onecatalog.adminapi.model;
 
+import com.winhead.onecatalog.adminapi.domain.ProductDetail;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
@@ -16,7 +18,7 @@ public class ProductModel {
     private String id;
     private String title;
     private String description;
-    private List<ProductDetailModel> detail;
+    private List<ProductDetail> detail;
     private List<String> pictures;
     private BigDecimal price;
     private BigDecimal costPrice;
@@ -31,6 +33,7 @@ public class ProductModel {
     private String category;
     private String subcategory;
     private String brand;
+    @Indexed(unique = true)
     private String code;
     private String catalog;
     private String status;

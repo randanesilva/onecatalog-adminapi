@@ -1,6 +1,6 @@
-package com.winhead.onecatalog.adminapi.domain;
+package com.winhead.onecatalog.adminapi.entrypoint.rest.dto;
 
-import com.winhead.onecatalog.adminapi.model.ProductDetailModel;
+import com.winhead.onecatalog.adminapi.domain.ProductDetail;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class EditProductRequestDto {
     private String title;
     private String description;
     private List<ProductDetail> detail;
@@ -31,10 +31,6 @@ public class Product {
     private String category;
     private String subcategory;
     private String brand;
-    private String code;
     private String catalog;
-    private String status;
     private int order;
-    private long createTimeStamp;
-    private long updateTimeStamp;
 }

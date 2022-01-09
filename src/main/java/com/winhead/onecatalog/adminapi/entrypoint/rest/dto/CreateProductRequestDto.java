@@ -14,13 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateProductRequestDto {
-    @NotBlank(message = "Campo login está vazio")
+    @NotBlank(message = "Campo titulo está vazio")
     private String title;
-    @NotBlank(message = "Campo login está vazio")
+    @NotBlank(message = "Campo descrição está vazio")
     private String description;
     private List<ProductDetailDto> detail;
     private List<String> pictures;
     private BigDecimal price;
+    private BigDecimal CostPrice;
     private String currency;
     private boolean splitSale;
     private float weight;
@@ -30,8 +31,6 @@ public class CreateProductRequestDto {
     private String category;
     private String subcategory;
     private String brand;
-    private String code;
-    private String user;
-    private String status;
     private int order;
+    private String unit;
 }
