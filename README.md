@@ -3,7 +3,7 @@
 ### Olá pessoal 👋
 
 <! --
- ESSA API É RESPONSÁVEL PELO GERENCIAMNTO DE UM CATÁLOGO DENTRO DO ECOMMERCE.
+ ESSA API É RESPONSÁVEL PELO GERENCIAMENTO DE UM CATÁLOGO DENTRO DO ECOMMERCE.
 
 Aqui estão a lista de devs responsáveis pelo dev:
 
