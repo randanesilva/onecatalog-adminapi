@@ -22,8 +22,6 @@ public class CreateProductRequestDto {
     private List<String> pictures;
     private BigDecimal price;
     private BigDecimal CostPrice;
-    private String currency;
-    private boolean splitSale;
     private float weight;
     private float height;
     private float width;
@@ -32,5 +30,4 @@ public class CreateProductRequestDto {
     private String subcategory;
     private String brand;
     private int order;
-    private String unit;
 }
