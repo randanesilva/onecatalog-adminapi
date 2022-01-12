@@ -15,12 +15,8 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
- 
-  reply:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Preparar e construir imagem do repositório
-      - run : ls
+      - name : Criar e construir build docker
+        run : ls
       
         
   
