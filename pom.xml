@@ -13,7 +13,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>onecatalog.adminapi</name>
 	<description>Admin api one catalog</description>
-
+	<properties>
+		<java.version>11</java.version>
+		<exec.mainClass>com.winhead.onecatalog.adminapi.Application</exec.mainClass>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
