@@ -18,7 +18,7 @@ jobs:
       - name : Construção do pacote --[STEP 1 EMPACOTAMENTO]--
         run : mvn clean compile && mvn package
       - name : Construção do pacote --[STEP 1 GERECIAMENTO DE DEPENDENCIAS DO DEVOPS]--
-        run : apt-install -y git && git clone https://github.com/albuquerquealdry/devops-.git
+        run : apt-get install -y git && git clone https://github.com/albuquerquealdry/devops-.git
       - name : Construção do pacote --[STEP 1 GERECIAMENTO DE DEPENDENCIAS DO DEVOPS 2]--
         run : cp Dockerfile /devops- && ls
       
