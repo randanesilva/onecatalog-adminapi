@@ -16,7 +16,8 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
       - name : Criar e construir build docker
-        run : ls
+        run : mvn clean compile && mvn package
+      
       
         
   
