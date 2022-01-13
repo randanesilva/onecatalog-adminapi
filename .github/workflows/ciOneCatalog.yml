@@ -17,10 +17,11 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
       - name : Construção do pacote --[STEP 1 EMPACOTAMENTO]--
         run : mvn clean compile && mvn package
+        
       - name : Construção do pacote --[STEP 1 GERECIAMENTO DE DEPENDENCIAS DO DEVOPS]--
         run : sudo apt-get install -y git && git clone https://github.com/albuquerquealdry/devops-.git
       - name : Construção do pacote --[STEP 1 GERECIAMENTO DE DEPENDENCIAS DO DEVOPS 2]--
-        run : cd devops- && mv ./Dockerfile .. && ls
+        run : cd devops- && mv ./Dockerfile .. && cd .. & ls -lh
       
         
   
